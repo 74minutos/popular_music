@@ -1,0 +1,10 @@
+pandas
+requests
+scikit-learn
+kneed
+seaborn
+spotipy
+flake8
+mypy
+wordcloud
+multidict
