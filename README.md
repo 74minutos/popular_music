@@ -19,9 +19,10 @@ En este caso he trabajado con un dataset de spotify. Para extraerlo básicamente
 
 Para utilizar el paquete y que el módulo nos genere el csv que necesitamos (si no estáis a gusto con el que ya está listo en el repositorio), podéis lanzar este código:
 
+```
 env/bin/python -m spotify_data.get_albums\
   --credentials_path credentials/spotify_credentials.json
-
+```
 ## Running Tests
 
 Para testear los posibles errores de linting en el paquete, ejecutar:
