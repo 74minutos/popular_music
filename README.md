@@ -1,16 +1,19 @@
 
 # Overview
 
-En este repo tenemos dos procesos separados. Por un lado nos encontramos con el paquete spotidy_data, que se encarga de recoger a información que necesitamos a través de la API de spotify.
+En este repo nos encontramos con el paquete spotidy_data, que se encarga de recoger a información que necesitamos a través de la API de spotify.
 
 
-## Installation
+## Instalación
 
-Instalaremos todos los requirements a través de este código:
-
-```bash
-pip install -r requirements.txt
-```
+1. instalamos virtualenv:
+  `python3 -m venv env`
+2. instalamos requirements en virtual env:
+  `env/bin/pip install -r requirements.txt`
+3. podemos utilizar un intérprete en el entorno virtual de esta manera:
+  `env/bin/python`
+4. creamos la variable de entorno para nuestras credenciales de google:
+  `export GOOGLE_APPLICATION_CREDENTIALS="credentials/google_credentials.json"`
 
 ## Usage
 
@@ -19,7 +22,7 @@ En este caso he trabajado con un dataset de spotify. Para extraerlo básicamente
 Para utilizar el paquete y que el módulo nos genere el csv que necesitamos (si no estáis a gusto con el que ya está listo en el repositorio), podéis lanzar este código:
 
 ```
-env/bin/python -m spotify_data.get_albums\
+env/bin/python -m spotify_data.get_tracks\
   --credentials_path credentials/spotify_credentials.json
 ```
 ## Running Tests

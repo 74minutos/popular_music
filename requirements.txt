@@ -8,3 +8,5 @@ flake8
 mypy
 wordcloud
 multidict
+google-cloud-bigquery
+google-api-python-client
