@@ -51,7 +51,7 @@ def songs_with_audio_features(credentials_path: str) -> None:
     df_with_songs['genre'] = df_with_songs['artist_name'].map(genres)
     df_with_songs['genre'] = df_with_songs['genre'].astype(str).str.replace("[", "").str.replace("]", "").str.replace("'", "")
     df_with_songs['genre'] = df_with_songs['genre'].str.split(',')
-    df_with_song = df_with_songs.explode('genre', ignore_index=True)
+    df_with_songs = df_with_songs.explode('genre', ignore_index=True)
 
     df_with_songs.to_csv("popular_music.csv", sep=";", index=False)
 

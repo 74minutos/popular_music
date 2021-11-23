@@ -1,7 +1,7 @@
 
 # Overview
 
-En este repo nos encontramos con el paquete spotidy_data, que se encarga de recoger a información que necesitamos a través de la API de spotify.
+A través de este repositorio quiero conseguir unos datos que me permitan hacer una visualización de los géneros musicales a través de las últimas décadas.
 
 
 ## Instalación
@@ -25,6 +25,13 @@ Para utilizar el paquete y que el módulo nos genere el csv que necesitamos (si 
 env/bin/python -m spotify_data.get_tracks\
   --credentials_path credentials/spotify_credentials.json
 ```
+
+Si quisiéramos subir esta info a BigQuery, tal y como he hecho para este proyecto, usaríamos el módulo upload_to_bigquery (cambiando los nombres de cliente, proyectos, tablas..):
+
+```
+env/bin/python -m spotify_data.upload_to_bigquery
+```
+
 ## Running Tests
 
 Para testear los posibles errores de linting en el paquete, ejecutar:
